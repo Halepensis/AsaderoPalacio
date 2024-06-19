@@ -1,15 +1,36 @@
 ---
-
+import MenuIcon from '../../public/images/MenuIcon.astro'
+import CloseIcon from '../../public/images/CloseIcon.astro'
 ---
 
-<header class="container">
+<header class='container'>
+  <button id='openMobile' aria-label='Open mobile menu'>
+    <MenuIcon width={32} height={32} />
+  </button>
+
+  <img
+    class='logo'
+    src='images/logo.webp'
+    alt='Logo de Asadero Palacio'
+    width='1739'
+    height='794'
+  />
   <h1>Asadero Palacio</h1>
 
-  <nav>
-    <a class="btn" href="/">Home</a>
-    <a class="btn" href="/productos">Productos</a>
-    <a class="btn" href="/about">About</a>
-    <a class="btn" href="/galeria">Galeria</a>
+  <nav id='mobile__navbar' class='mobile__navbar'>
+    <button id='closeMobile' aria-label='Close mobile menu'>
+      <CloseIcon width={32} height={32} />
+    </button>
+    <a class='btn' href='/'>Home</a>
+    <a class='btn' href='/productos'>Productos</a>
+    <a class='btn' href='/about'>About</a>
+    <a class='btn' href='/galeria'>Galeria</a>
+  </nav>
+  <nav class='desktop__navbar'>
+    <a class='btn' href='/'>Home</a>
+    <a class='btn' href='/productos'>Productos</a>
+    <a class='btn' href='/about'>About</a>
+    <a class='btn' href='/galeria'>Galeria</a>
   </nav>
   <p>
     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non facilis
@@ -18,4 +39,41 @@
   </p>
 </header>
 
-<style></style>
+<script>
+  import { openMobile, closeMobile } from '../js/mobile'
+  openMobile()
+  closeMobile()
+</script>
+
+<style>
+  #openMobile {
+    position: fixed;
+    top: 1rem;
+  }
+  .mobile__navbar {
+    width: 100%;
+    height: 100svh;
+    background-color: #0f0e0e76;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    a {
+      text-align: center;
+      width: 250px;
+    }
+  }
+  .desktop__navbar {
+    display: none;
+    gap: 1rem;
+  }
+  .logo {
+    width: 400px;
+    height: auto;
+    aspect-ratio: 1739/794;
+  }
+</style>
