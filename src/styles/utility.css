@@ -26,7 +26,7 @@
 .btn {
 	cursor: pointer;
 	display: inline-block;
-	background-color: var(--clr-secundary);
+	background-color: var(--clr-terciary);
 	color: var(--clr-primary);
 	padding: 0.5em 1em;
 	font-weight: 500;
@@ -36,8 +36,8 @@
 	transition: color 0.3s, background-color 0.3s;
 }
 .btn:hover {
-	background-color: var(--clr-primary);
-	color: var(--clr-secundary);
+	background-color: var(--clr-secundary);
+	color: var(--clr-text);
 }
 .btn:focus-visible {
 	outline: solid var(--clr-light);
