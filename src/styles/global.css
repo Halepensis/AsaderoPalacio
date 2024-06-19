@@ -1,0 +1,104 @@
+/* FONTS */
+/* roboto-latin-400-normal */
+@font-face {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-display: swap;
+	font-weight: 400;
+	src: url(https://cdn.jsdelivr.net/fontsource/fonts/roboto@latest/latin-400-normal.woff2)
+			format('woff2'),
+		url(https://cdn.jsdelivr.net/fontsource/fonts/roboto@latest/latin-400-normal.woff)
+			format('woff');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+		U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
+		U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* open-sans-latin-wght-normal */
+@font-face {
+	font-family: 'Open Sans Variable';
+	font-style: normal;
+	font-display: swap;
+	font-weight: 300 800;
+	src: url(https://cdn.jsdelivr.net/fontsource/fonts/open-sans:vf@latest/latin-wght-normal.woff2)
+		format('woff2-variations');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+		U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
+		U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+:root {
+	/* FONTS */
+	--font-primary: 'Roboto', sans-serif;
+	--font-secondary: 'Open Sans Variable', sans-serif;
+
+	/* COLORS */
+	--clr-dark: #040d12;
+	--clr-light: #a5c1b6;
+	--clr-primary: #183d3d;
+	--clr-secundary: #5c8374;
+	--clr-slate: #7e9b8b;
+	--clr-slate100: #a5c1b6;
+
+	/* SIZES */
+	--size-xxs: 0.5rem;
+	--size-xs: 0.75rem;
+	--size-sm: 0.875rem;
+	--size-base: 1rem;
+	--size-lg: 1.125rem;
+	--size-xl: 1.25rem;
+	--size-2xl: 1.5rem;
+	--size-3xl: 1.875rem;
+	--size-4xl: 2.25rem;
+	--size-5xl: 3rem;
+	--size-6xl: 3.75rem;
+	--size-7xl: 4.5rem;
+	--size-8xl: 6rem;
+	--size-9xl: 8rem;
+	--size-10xl: 10rem;
+}
+* {
+	margin: 0;
+	padding: 0;
+	line-height: calc(1em +0.5rem);
+}
+
+body {
+	font-family: var(--font-primary);
+	background-color: var(--clr-dark);
+	color: var(--clr-light);
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+button {
+	border: none;
+	background: none;
+	color: inherit;
+	cursor: pointer;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	letter-spacing: -0.025em;
+}
+button:focus-visible,
+a:focus-visible {
+	outline: solid var(--clr-light);
+}
