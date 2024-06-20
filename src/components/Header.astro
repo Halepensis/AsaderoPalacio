@@ -5,10 +5,10 @@ import CloseIcon from '../../public/images/CloseIcon.astro'
 
 <header>
   <nav class='desktop__navbar'>
-    <a class='btn' href='/'>Home</a>
-    <a class='btn' href='/productos'>Productos</a>
-    <a class='btn' href='/about'>About</a>
-    <a class='btn' href='/galeria'>Galeria</a>
+    <a class='btn desk__btn' href='/'>Home</a>
+    <a class='btn desk__btn' href='/productos'>Productos</a>
+    <a class='btn desk__btn' href='/about'>About</a>
+    <a class='btn desk__btn' href='/galeria'>Galeria</a>
   </nav>
   <div class='container'>
     <button id='openMobile' aria-label='Open mobile menu'>
@@ -129,13 +129,15 @@ import CloseIcon from '../../public/images/CloseIcon.astro'
       display: flex;
       justify-content: center;
       gap: var(--size-5xl);
-
       align-items: center;
-      a {
-        font-size: var(--size-xl);
-        width: fit-content;
-        background-color:;
-      }
+    }
+    .desk__btn {
+      font-size: var(--size-xl);
+      width: fit-content;
+      transition: background-color 0.3s;
+    }
+    .desk__btn:hover {
+      background-color: var(--clr-primary);
     }
   }
 
@@ -166,15 +168,6 @@ import CloseIcon from '../../public/images/CloseIcon.astro'
   }
 
   /* 2xl */
-  @media (min-width: 1536px) {
-    .logo {
-      width: 1000px;
-    }
-    h1 {
-      font-size: var(--size-8xl);
-    }
-    p {
-      font-size: var(--size-4xl);
-    }
-  }
+  /* @media (min-width: 1536px) {} */
 </style>
+<!--  -->
