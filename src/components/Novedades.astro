@@ -1,0 +1,88 @@
+<h2 class='main__el-title'>Novedades</h2>
+<div class='novedades__grid'>
+  <article class='novedades__ele'>
+    <h3 class='novedades__title'>Emapanadillas Argentinas</h3>
+    <img
+      class='novedades__img'
+      src='images/productos/Empanadillas.webp'
+      alt='foto de unas empandillas recien sacadas del horno'
+    />
+    <p class='novedades__desc'>
+      Rellenas de <strong>carne picada, aceitunas y huevo</strong>. Las
+      autenticas empanadillas argentinas <strong>con masa casera</strong>
+    </p>
+  </article>
+  <article class='novedades__ele'>
+    <h3 class='novedades__title'>Canelones de Pate</h3>
+    <img
+      class='novedades__img'
+      src='images/productos/paella.jpg'
+      alt='Fotografia de una paella de pollo y judias'
+    />
+    <p class='novedades__desc'>
+      Con <strong>pate, pollo y setas</strong>. Los autenticos empanadillas
+      argentinas <strong>con masa casera</strong>
+    </p>
+  </article>
+</div>
+
+<style>
+  .novedades__grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+  .main__el-title {
+    margin-bottom: 1rem;
+    font-family: var(--font-primary);
+    font-size: var(--size-2xl);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .novedades__ele {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 3;
+  }
+  .novedades__title {
+    font-size: var(--size-2xl);
+  }
+  .novedades__img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+  .novedades__desc {
+    max-width: 50ch;
+    font-size: var(--size-lg);
+  }
+
+  /* MOBILE FIRST  */
+
+  /* xs */
+  @media (min-width: 475px) {
+    .novedades__grid {
+      gap: 0.75rem 2rem;
+    }
+  }
+
+  /* sm */
+  /* @media (min-width: 640px) {} */
+
+  /* md */
+  @media (min-width: 768px) {
+    .novedades__img {
+      height: 150px;
+    }
+  }
+
+  /* lg */
+  /* @media (min-width: 1024px){} */
+
+  /* xl */
+  /* @media (min-width: 1280px){} */
+
+  /* 2xl */
+  /* @media (min-width: 1536px){} */
+</style>

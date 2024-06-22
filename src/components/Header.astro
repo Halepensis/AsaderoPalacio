@@ -1,6 +1,6 @@
 ---
-import MenuIcon from '../../public/images/MenuIcon.astro'
-import CloseIcon from '../../public/images/CloseIcon.astro'
+import MenuIcon from '@icons/MenuIcon.astro'
+import CloseIcon from '@icons/CloseIcon.astro'
 ---
 
 <header>
@@ -38,7 +38,7 @@ import CloseIcon from '../../public/images/CloseIcon.astro'
 </header>
 
 <script>
-  import { openMobile, closeMobile } from '../js/mobile'
+  import { openMobile, closeMobile } from '@js/mobile.js'
   openMobile()
   closeMobile()
 </script>
@@ -48,6 +48,7 @@ import CloseIcon from '../../public/images/CloseIcon.astro'
     position: fixed;
     top: 1rem;
     left: 1rem;
+    z-index: 2;
   }
   .mobile__navbar {
     width: 100%;
@@ -58,8 +59,8 @@ import CloseIcon from '../../public/images/CloseIcon.astro'
     left: 0;
     display: none;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    padding-top: 2rem;
     gap: 1rem;
     a {
       text-align: center;
@@ -95,6 +96,9 @@ import CloseIcon from '../../public/images/CloseIcon.astro'
     .logo {
       width: 400px;
     }
+    h1 {
+      font-size: var(--size-5xl);
+    }
     p {
       font-size: var(--size-lg);
     }
@@ -102,9 +106,6 @@ import CloseIcon from '../../public/images/CloseIcon.astro'
 
   /* sm */
   @media (min-width: 640px) {
-    h1 {
-      font-size: var(--size-5xl);
-    }
     p {
       font-size: var(--size-xl);
     }
@@ -170,4 +171,3 @@ import CloseIcon from '../../public/images/CloseIcon.astro'
   /* 2xl */
   /* @media (min-width: 1536px) {} */
 </style>
-<!--  -->
