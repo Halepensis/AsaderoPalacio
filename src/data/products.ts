@@ -14,14 +14,10 @@ type alergenos =
   | 'Altramuces'
   | 'Moluscos'
 
-interface Price {
-  size: string
-  price: number
-}
 interface Product {
   id: number
   name: string
-  price: number | Price[]
+  price: number | number[]
   image: string
   category: string
   description: string
@@ -33,7 +29,7 @@ export const productos: Product[] = [
     id: 1,
     name: 'Pollo Asado',
     price: 11.0,
-    image: 'images/productos/Pollo_Asado.web',
+    image: 'images/productos/Pollo_Asado.webp',
     category: 'Caliente',
     description:
       'Pollo asado condimentado con hierbas naturales sin adivitivos ni conservantes.'
@@ -42,7 +38,7 @@ export const productos: Product[] = [
     id: 2,
     name: 'Patatas Asadas',
     price: 4.8,
-    image: 'images/productos/Pollo_Asado.web',
+    image: 'images/productos/Pollo_Asado.webp',
     category: 'Caliente',
     description: 'Patatas confitadas terminadas en el horno',
     trazas: ['Gluten']
@@ -50,21 +46,8 @@ export const productos: Product[] = [
   {
     id: 3,
     name: 'Patatas Fritas',
-    price: [
-      {
-        size: 'Pequeño',
-        price: 2.1
-      },
-      {
-        size: 'Mediano',
-        price: 3.5
-      },
-      {
-        size: 'Grande',
-        price: 4.5
-      }
-    ],
-    image: 'images/productos/Pollo_Asado.web',
+    price: [2.1, 3.5, 4.5],
+    image: 'images/productos/Pollo_Asado.webp',
     category: 'Caliente',
     description: 'Patatas fritas de bastones de 1cm de grosor de alta calidad',
     trazas: ['Gluten']
@@ -73,7 +56,7 @@ export const productos: Product[] = [
     id: 4,
     name: 'Muslo Relleno',
     price: 8.0,
-    image: 'images/productos/Pollo_Asado.web',
+    image: 'images/productos/Pollo_Asado.webp',
     category: 'Caliente',
     description: 'Muslo de pollo deshuesado y relleno de jamon serrano y queso',
     alergenos: ['Lacteos']
@@ -101,7 +84,7 @@ export const productos: Product[] = [
     id: 7,
     name: 'Empanadillas argentinas',
     price: 2.5,
-    image: 'images/productos/Empanadillas.web',
+    image: 'images/productos/Empanadillas.webp',
     category: 'Caliente',
     description:
       'Empanadillas argentinas de carne picada, aceituna y huevo duro',
@@ -120,7 +103,7 @@ export const productos: Product[] = [
     id: 9,
     name: 'Paella',
     price: 5.2,
-    image: 'images/productos/Paella.web',
+    image: 'images/productos/Paella.webp',
     category: 'Caliente',
     description: 'Paella de pollo y verduras',
     alergenos: ['Apio']
@@ -139,7 +122,7 @@ export const productos: Product[] = [
     id: 11,
     name: 'Ensalada Mixta',
     price: 3.5,
-    image: 'images/productos/Ensalada_mixta.web',
+    image: 'images/productos/Ensalada_mixta.webp',
     category: 'Frio',
     description:
       'Ensalada mixta con lechuga, tomate, zanahoria, maiz y pepinillos',

@@ -3,14 +3,23 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"],
-      "@components/*": ["src/components/*"],
-      "@images/*": ["public/images/*"],
-      "@icons/*": ["public/icons/*"],
-      "@js/*": ["src/js/*"],
-    }
-
-
-
+      "@/*": [
+        "src/*"
+      ],
+      "@components/*": [
+        "src/components/*"
+      ],
+      "@images/*": [
+        "public/images/*"
+      ],
+      "@icons/*": [
+        "public/icons/*"
+      ],
+      "@js/*": [
+        "src/js/*"
+      ]
+    },
+    "jsx": "react-jsx",
+    "jsxImportSource": "preact"
   }
 }
