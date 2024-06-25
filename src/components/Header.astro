@@ -1,6 +1,8 @@
 ---
 import MenuIcon from '@icons/MenuIcon.astro'
 import CloseIcon from '@icons/CloseIcon.astro'
+import Image from 'astro/components/Image.astro'
+import logo from '@/imagenes/logo.webp'
 ---
 
 <header>
@@ -15,13 +17,7 @@ import CloseIcon from '@icons/CloseIcon.astro'
       <MenuIcon width={32} height={32} />
     </button>
 
-    <img
-      class='logo'
-      src='images/logo.webp'
-      alt='Logo de Asadero Palacio'
-      width='1739'
-      height='794'
-    />
+    <Image class='logo' src={logo} alt='Logo de Asadero Palacio' />
     <h1>Asadero Palacio</h1>
     <p>Más de 20 años ofreciendote el mejor servicio</p>
 

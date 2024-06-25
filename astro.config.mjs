@@ -6,5 +6,6 @@ import preact from "@astrojs/preact";
 export default defineConfig({
   site: 'https://asaderopalacio.com',
   base: "/",
-  integrations: [preact()]
+  integrations: [preact()],
+  output: "static",
 });
