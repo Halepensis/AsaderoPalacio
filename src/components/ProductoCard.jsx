@@ -1,9 +1,10 @@
-import { useState } from "preact/hooks";
+  import { useState,useEffect } from "preact/hooks";
 import { productos } from "@/data/products";
 import './ProductoCard.css';
 
 
 export default function ProductoCard() {
+  
     const [producto, setProducto] = useState(productos[0]);
         
     const handleClick = (product) => {
@@ -11,32 +12,38 @@ export default function ProductoCard() {
     }
     return (
         <div>
-          <article class="producto__card">
-              <div class="producto__title">
+          <article  class="producto__card">
+              <aside class="producto__aside">
                     <h2 class="producto__name">{producto.name}</h2>
+                    <p class="producto__price">
                     {typeof(producto.price)=="number" && 
-                    <strong class="producto__price">{producto.price}€</strong>}
+                    <strong >{producto.price}€</strong>}
                     {typeof(producto.price)=="object" && 
                     producto.price.map((price)=>(
-                    <strong class="producto__price">{price}€ |</strong>))}
-              </div>
+                    <strong >{price}€ |</strong>))}
+                    </p>
+                    <p>{producto.description}</p>
               
-              <aside class="producto__alergenos">
-                {producto.alergenos?.map(alergeno=>(
-                  <img class="alergenos__icon" 
-                  src={`icons/alergenos/${alergeno}.png`} 
-                  title={alergeno} 
-                  alt={alergeno}
-                  />
-                  ))
-              }
+              
+                <div class="producto__alergenos">
+                  {producto.alergenos? 
+                  producto.alergenos.map(alergeno=>(
+                    <img class="alergenos__icon" 
+                    src={`icons/alergenos/${alergeno}.png`} 
+                    title={alergeno} 
+                    alt={alergeno}
+                    />
+                    ))
+                    :"Sin alergenos"}
+              </div>
               </aside>
               <img
+              key={producto.id}
                 class='productos__img'
                 src={producto.image}
                 alt={`Imagen de ${producto.name}`}
+              
               />
-              <p>{producto.description}</p>
               
           </article>
             <ul class='productos__grid'>

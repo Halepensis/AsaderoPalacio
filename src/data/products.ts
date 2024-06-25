@@ -56,7 +56,7 @@ export const productos: Product[] = [
     id: 4,
     name: 'Muslo Relleno',
     price: 8.0,
-    image: 'images/productos/Pollo_Asado.webp',
+    image: 'images/productos/Muslo_relleno.webp',
     category: 'Caliente',
     description: 'Muslo de pollo deshuesado y relleno de jamon serrano y queso',
     alergenos: ['Lacteos']
@@ -65,7 +65,7 @@ export const productos: Product[] = [
     id: 5,
     name: 'Caracoles',
     price: 12.0,
-    image: 'https://example.com/images/fresh-broccoli.jpg',
+    image: 'images/productos/Caracoles.webp',
     category: 'Caliente',
     description: 'Caracoles cabrilla con salsa picante y almendras',
     alergenos: ['Pescado', 'Sulfitos', 'Moluscos', 'Frutos de cascara']
@@ -74,7 +74,7 @@ export const productos: Product[] = [
     id: 6,
     name: 'Croquetas',
     price: 7.2,
-    image: 'https://example.com/images/greek-yogurt.jpg',
+    image: 'images/productos/Croquetas.webp',
     category: 'Caliente',
     description:
       'Bandejas de 6 Ud, croquetas caseras de distintos tipos: Pollo , Jamon o de Setas shitake',
@@ -94,7 +94,7 @@ export const productos: Product[] = [
     id: 8,
     name: 'Canelones de Pate',
     price: 7.2,
-    image: 'https://example.com/images/granola.jpg',
+    image: 'images/productos/Canelones.webp',
     category: 'Caliente',
     description: 'Canelones  rellenos de pollo, pate de oca y setas',
     alergenos: ['Lacteos', 'Gluten', 'Sulfitos']
@@ -112,7 +112,7 @@ export const productos: Product[] = [
     id: 10,
     name: 'Salmorejo',
     price: 3.5,
-    image: 'https://example.com/images/spaghetti-pasta.jpg',
+    image: 'images/productos/Pollo_Asado.webp',
     category: 'Frio',
     description: 'Salmorejo',
     alergenos: ['Gluten', 'Sulfitos']
@@ -132,7 +132,7 @@ export const productos: Product[] = [
     id: 12,
     name: 'Alioli',
     price: 1.5,
-    image: 'https://example.com/images/avocado.jpg',
+    image: 'images/productos/Pollo_Asado.webp',
     category: 'Frio',
     description: 'Salsa alioli poco picante hecha con ajo y aceite',
     alergenos: ['Lacteos']
