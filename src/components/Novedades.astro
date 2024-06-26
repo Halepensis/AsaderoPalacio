@@ -1,10 +1,16 @@
+---
+import { Image } from 'astro:assets'
+import EmpanadillasImg from '@/imagenes/novedades/Empanadillas.webp'
+import CanelonesImg from '@/imagenes/novedades/Canelones.webp'
+---
+
 <h2 class='main__el-title'>Novedades</h2>
 <div class='novedades__grid'>
   <article class='novedades__ele'>
     <h3 class='novedades__title'>Emapanadillas Argentinas</h3>
-    <img
+    <Image
       class='novedades__img'
-      src='images/productos/Empanadillas.webp'
+      src={EmpanadillasImg}
       alt='foto de unas empandillas recien sacadas del horno'
     />
     <p class='novedades__desc'>
@@ -14,9 +20,9 @@
   </article>
   <article class='novedades__ele'>
     <h3 class='novedades__title'>Canelones de Pate</h3>
-    <img
+    <Image
       class='novedades__img'
-      src='images/productos/paella.jpg'
+      src={CanelonesImg}
       alt='Fotografia de una paella de pollo y judias'
     />
     <p class='novedades__desc'>
@@ -78,7 +84,11 @@
   }
 
   /* lg */
-  /* @media (min-width: 1024px){} */
+  @media (min-width: 1024px) {
+    .novedades__img {
+      height: 200px;
+    }
+  }
 
   /* xl */
   /* @media (min-width: 1280px){} */

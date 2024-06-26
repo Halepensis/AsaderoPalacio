@@ -12,7 +12,7 @@ export default function ProductoCard() {
     }
     return (
         <div>
-          <article  class="producto__card">
+          <article id="card" class="producto__card">
               <aside class="producto__aside">
                     <h2 class="producto__name">{producto.name}</h2>
                     <p class="producto__price">
@@ -46,12 +46,17 @@ export default function ProductoCard() {
               />
               
           </article>
+
+          
+          
             <ul class='productos__grid'>
+      
             {
               productos.map((product) => (
-                <button key={product.id} onClick={()=>handleClick(product)} class='producto'>
+                  
+                <li class='producto btn'  key={product.id} onClick={()=>handleClick(product)} >
                   {product.name}
-                </button>
+                </li>
               ))
             }
           </ul>
