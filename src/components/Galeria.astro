@@ -1,0 +1,110 @@
+---
+import 'photoswipe/style.css'
+const fotosGaleria = [
+  {
+    href: '/images/galeria/paella.jpg',
+    width: '1020',
+    height: '574',
+    description: 'example descrition'
+  },
+  {
+    href: '/images/galeria/paella.jpg',
+    width: '1920',
+    height: '1080',
+    description: 'example descrition'
+  },
+  {
+    href: '/images/galeria/paella.jpg',
+    width: '1920',
+    height: '1080',
+    description: 'example descrition'
+  },
+  {
+    href: 'images/galeria/paella.jpg',
+    width: '1920',
+    height: '1080',
+    description: 'example descrition'
+  },
+  {
+    href: 'images/galeria/paella.jpg',
+    width: '1920',
+    height: '1080',
+    description: 'example descrition'
+  },
+  {
+    href: 'images/galeria/paella.jpg',
+    width: '1920',
+    height: '1080',
+    description: 'example descrition'
+  },
+  {
+    href: 'images/galeria/paella.jpg',
+    width: '1920',
+    height: '1080',
+    description: 'example descrition'
+  },
+  {
+    href: 'images/galeria/paella.jpg',
+    width: '1920',
+    height: '1080',
+    description: 'example descrition'
+  }
+]
+---
+
+<section class='galeria container'>
+  <h2 class='galeria--title'>Galeria</h2>
+  <div class='gridGaleria' id='galeria-imgs'>
+    {
+      fotosGaleria.map((foto, i) => (
+        <a
+          href={foto.href}
+          data-pswp-width={foto.width}
+          data-pswp-height={foto.height}
+          data-cropped='true'
+          target='_blank'
+        >
+          <img class='imagenGaleria' src={foto.href} alt={foto.description} />
+        </a>
+      ))
+    }
+  </div>
+</section>
+
+<script>
+  import PhotoSwipeLightbox from 'photoswipe/lightbox'
+
+  const lightbox = new PhotoSwipeLightbox({
+    gallery: '#galeria-imgs',
+    children: 'a',
+    pswpModule: () => import('photoswipe')
+  })
+  document.addEventListener(
+    'astro:page-load',
+    () => {
+      if (lightbox) lightbox.init()
+    },
+    { once: false }
+  )
+</script>
+
+<style>
+  .galeria {
+    margin-top: var(--size-2xl);
+  }
+  .galeria--title {
+    font-family: var(--font-primary);
+    font-size: var(--size-xl);
+    margin-bottom: var(--size-base);
+  }
+  .gridGaleria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
+    gap: var(--size-base);
+  }
+  .imagenGaleria {
+    border-radius: 6px;
+    object-fit: cover;
+  }
+</style>

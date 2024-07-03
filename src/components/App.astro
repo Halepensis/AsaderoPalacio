@@ -1,0 +1,83 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import Novedades from '@/components/Novedades.astro'
+import Productos from '@/components/Productos.astro'
+import Desayunos from '@/components/Desayunos.astro'
+import Horario from '@components/Horario.astro'
+---
+
+<Layout
+  title='Asadero Palacio -Dúrcal'
+  description='Los mejores pollos asados desde hace mas de 30 años, en Dúrcal-Granada'
+>
+  <main class='container main'>
+    <section class='main__element novedades'>
+      <Novedades />
+    </section>
+    <section id='productos' class='main__element productos'>
+      <Productos />
+    </section>
+    <section class='main__element desayunos'>
+      <Desayunos />
+    </section>
+    <section class='main__element extra'>
+      <Horario />
+    </section>
+  </main>
+</Layout>
+<style>
+  .main {
+    font-family: var(--font-secundary);
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: minmax(300px, 1fr);
+    gap: 1rem;
+  }
+  .main__element {
+    padding: 1rem;
+    border: 1px solid #0f0e0e;
+    border-radius: 6px;
+    color: var(--clr-primary);
+    background-color: var(--clr-terciary);
+  }
+
+  /* MOBILE FIRST  */
+
+  /* xs */
+  /* @media (min-width: 475px){} */
+
+  /* sm */
+  /* @media (min-width: 640px){} */
+
+  /* md */
+  /* @media (min-width: 768px){} */
+
+  /* lg */
+  @media (min-width: 1024px) {
+    .main {
+      grid-template-areas:
+        'productos productos productos novedades'
+        'desayunos desayunos extra      extra';
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .novedades {
+      grid-area: novedades;
+    }
+    .productos {
+      grid-area: productos;
+    }
+    .desayunos {
+      grid-area: desayunos;
+    }
+    .extra {
+      grid-area: extra;
+    }
+  }
+
+  /* xl */
+  /* @media (min-width: 1280px){} */
+
+  /* 2xl */
+  /* @media (min-width: 1536px){} */
+</style>

@@ -8,4 +8,11 @@ export default defineConfig({
   base: "/",
   integrations: [preact()],
   output: "static",
+  i18n:{
+    defaultLocale:"es",
+    locales:["es","en"],
+    routing:{
+      prefixDefaultLocale:false
+    }
+  }
 });

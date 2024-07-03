@@ -1,45 +1,74 @@
 ---
 import MenuIcon from '@icons/MenuIcon.astro'
-import CloseIcon from '@icons/CloseIcon.astro'
 import Image from 'astro/components/Image.astro'
-import logo from '@/imagenes/logo.webp'
 ---
 
-<header>
+<header transition:persist>
   <nav class='desktop__navbar'>
-    <a class='btn desk__btn' href='/'>Home</a>
-    <a class='btn desk__btn' href='/productos'>Productos</a>
-    <a class='btn desk__btn' href='/about'>About</a>
-    <a class='btn desk__btn' href='/galeria'>Galeria</a>
+    <a class='btn desk__btn' href='/'>Inicio</a>
+    <a class='btn desk__btn' href='/about'>Conocenos</a>
+    <a class='btn desk__btn' href='/gallery'>Galeria</a>
   </nav>
   <div class='container'>
     <button id='openMobile' aria-label='Open mobile menu'>
       <MenuIcon width={32} height={32} />
     </button>
 
-    <Image class='logo' src={logo} alt='Logo de Asadero Palacio' />
+    <Image
+      loading='eager'
+      fetchpriority='high'
+      class='logo'
+      src='/images/logo.webp'
+      width='1739'
+      height='794'
+      alt='Logo de Asadero Palacio'
+    />
+
     <h1>Asadero Palacio</h1>
     <p>Más de 20 años ofreciendote el mejor servicio</p>
 
     <nav id='mobile__navbar' class='mobile__navbar'>
-      <button id='closeMobile' aria-label='Close mobile menu'>
-        <CloseIcon width={32} height={32} />
-      </button>
-      <a class='btn' href='/'>Home</a>
-      <a class='btn' href='/productos'>Productos</a>
-      <a class='btn' href='/about'>About</a>
-      <a class='btn' href='/galeria'>Galeria</a>
+      <a class='mobile__btn' href='/'>Inicio</a>
+      <a class='mobile__btn' href='/about'>Conocenos</a>
+      <a class='mobile__btn' href='/gallery'>Galeria</a>
     </nav>
   </div>
 </header>
 
 <script>
-  import { openMobile, closeMobile } from '@js/mobile.js'
+  import { closeMobile, openMobile } from '@/js/mobile'
   openMobile()
   closeMobile()
 </script>
 
 <style>
+  :root {
+    --width-menu: 200px;
+  }
+  @keyframes blur {
+    to {
+      box-shadow: 0 5px 50px -5px hsla(0, 0, 100%, 0.1) 0 0px 0px 1px hsla(0, 0, 0, 0.3);
+      background: var(--clr-primary);
+      backdrop-filter: blur(5px);
+    }
+  }
+  @keyframes show {
+    0% {
+      width: 0px;
+    }
+    100% {
+      width: var(--width-menu);
+    }
+  }
+  @keyframes hide {
+    0% {
+      width: var(--width-menu);
+    }
+    100% {
+      width: 0%;
+    }
+  }
+
   #openMobile {
     position: fixed;
     top: 1rem;
@@ -47,25 +76,50 @@ import logo from '@/imagenes/logo.webp'
     z-index: 2;
   }
   .mobile__navbar {
-    width: 100%;
-    height: 100svh;
+    width: var(--width-menu);
+    height: 100dvh;
     background-color: #0f0e0e76;
     position: fixed;
+    display: none;
     top: 0;
     left: 0;
-    display: none;
     flex-direction: column;
+    justify-content: top;
     align-items: center;
-    padding-top: 2rem;
+    padding-top: 5rem;
     gap: 1rem;
-    a {
-      text-align: center;
-      width: 250px;
-    }
+    animation-name: show;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+    overflow: hidden;
+  }
+  #mobile__navbar.show {
+    display: flex;
+  }
+
+  .mobile__btn {
+    font-size: var(--size-lg);
+    text-align: center;
+    text-decoration: none;
+    background-color: var(--clr-primary);
+    padding: 0.5em 1em;
+    width: var(--width-menu);
+    transition:
+      color 0.3s,
+      transform 0.4s;
+    animation-name: show;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+  }
+  .mobile__btn:hover {
+    background-color: var(--clr-terciary);
+    color: var(--clr-primary);
+    transform: translate(20px);
   }
   .desktop__navbar {
     display: none;
   }
+
   .logo {
     margin-inline: auto;
     width: 305px;
@@ -120,21 +174,25 @@ import logo from '@/imagenes/logo.webp'
     }
 
     .desktop__navbar {
-      background-color: var(--clr-secundary);
+      padding: var(--size-xxs);
       width: 100vw;
-      padding: 1rem;
+      position: fixed;
+      top: 0;
       display: flex;
       justify-content: center;
       gap: var(--size-5xl);
       align-items: center;
+      animation: blur linear;
+      animation-timeline: scroll();
+      animation-range: 0 2000px;
     }
     .desk__btn {
-      font-size: var(--size-xl);
+      font-size: var(--size-base);
       width: fit-content;
       transition: background-color 0.3s;
     }
     .desk__btn:hover {
-      background-color: var(--clr-primary);
+      background-color: var(--clr-slate100);
     }
   }
 

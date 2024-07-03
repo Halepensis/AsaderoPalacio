@@ -1,21 +1,20 @@
 import { useState } from "preact/hooks";
 import { productos } from "@/data/products";
-import './ProductoCard.css';
 
 
 export default function ProductoCard() {
   
     const [producto, setProducto] = useState(productos[0]);
         
-    const handleClick = (product) => {
+    const handleClick = (product) => {        
         setProducto(product);
     }
     return (
         <div>
           <article id="card" class="producto__card">
               <aside class="producto__aside">
-                    <h2 class="producto__name">{producto.name}</h2>
-                    <p class="producto__price">
+                    <h2 className="producto__name">{producto.name}</h2>
+                    <p className="producto__price">
                     {typeof(producto.price)=="number" && 
                     <strong >{producto.price}€</strong>}
                     {typeof(producto.price)=="object" && 
@@ -25,7 +24,7 @@ export default function ProductoCard() {
                     <p>{producto.description}</p>
               
               
-                <div class="producto__alergenos">
+                <div className="producto__alergenos">
                   {producto.alergenos? 
                   producto.alergenos.map(alergeno=>(
                     <img class="alergenos__icon" 
@@ -39,7 +38,7 @@ export default function ProductoCard() {
               </aside>
               <img
               key={producto.id}
-                class='productos__img'
+                className='productos__img'
                 src={producto.image}
                 alt={`Imagen de ${producto.name}`}
               
@@ -54,7 +53,7 @@ export default function ProductoCard() {
             {
               productos.map((product) => (
                   
-                <li class='producto btn'  key={product.id} onClick={()=>handleClick(product)} >
+                <li className='producto btn'  key={product.id} onClick={()=>handleClick(product)} >
                   {product.name}
                 </li>
               ))

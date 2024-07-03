@@ -1,0 +1,80 @@
+---
+
+---
+
+<section class='about container'>
+  <div class='horario'>
+    <h2 class='horario--title'>Horario</h2>
+    <p>Viernes a Domingo y <strong>Festivos</strong></p>
+    <p>8:00 - 16:00</p>
+  </div>
+  <aside>
+    <iframe
+      class='google'
+      src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12747.259812320981!2d-3.5696000000000003!3d36.99035!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd71ee08ee711c29%3A0x146c03da6f15390!2sAsadero%20Palacio!5e0!3m2!1ses!2ses!4v1719919613047!5m2!1ses!2ses'
+      style='border:0;'
+      allowfullscreen=''
+      loading='lazy'
+      referrerpolicy='no-referrer-when-downgrade'></iframe>
+  </aside>
+</section>
+
+<style>
+  .about {
+    margin-top: var(--size-lg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--size-lg);
+  }
+  .horario {
+    font-family: var(--font-secondary);
+    text-align: center;
+    margin-top: var(--size-lg);
+  }
+  .horario--title {
+    font-family: var(--font-primary);
+  }
+  .google {
+    border-radius: 6px;
+    height: 200px;
+    width: 200px;
+  }
+
+  /* MOBILE FIRST  */
+
+  /* xs */
+  @media (min-width: 475px) {
+    .google {
+      width: 400px;
+      height: 200px;
+    }
+  }
+
+  /* sm */
+  /* @media (min-width: 640px){} */
+
+  /* md */
+  @media (min-width: 768px) {
+    .horario {
+      font-size: var(--size-xl);
+    }
+
+    .about {
+      gap: var(--size-3xl);
+    }
+    .google {
+      width: 600px;
+      height: 400px;
+    }
+  }
+
+  /* lg */
+  /* @media (min-width: 1024px){} */
+
+  /* xl */
+  /* @media (min-width: 1280px){} */
+
+  /* 2xl */
+  /* @media (min-width: 1536px){} */
+</style>

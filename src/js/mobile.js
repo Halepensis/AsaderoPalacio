@@ -1,14 +1,33 @@
 const menu = document.getElementById('mobile__navbar')
-export function openMobile() {
-    const openMobile = document.getElementById('openMobile')
-    openMobile.addEventListener('click', () => {
-      menu.style.display === 'flex'?
-      menu.style.display = 'none':
-      menu.style.display = 'flex'
+const openButton = document.getElementById('openMobile')
+
+export const openMobile = ()=>{
+    openButton.addEventListener('click', () => {
+      if(menu.classList.contains('show')){
+        menu.style.animationName= "hide"
+        setTimeout(()=>{
+        menu.classList.remove("show") 
+        },300)
+      }
+      else {
+        menu.style.animationName="show"  
+        menu.classList.add("show") }
+
     })}
 
-export function closeMobile() {
-    const closeMobile = document.getElementById('closeMobile')
-    closeMobile.addEventListener('click', () => {
-      menu.style.display = 'none'
+export const closeMobile = ()=> {
+    window.addEventListener('click', function(e){
+    if (!menu.contains(e.target) 
+    && !openButton.contains(e.target) 
+    &&  menu.classList.contains("show")){
+
+      menu.style.animationName="hide"
+      setTimeout(()=>{
+        
+        
+        menu.classList.remove("show") 
+        },1000)
+    }
     })}
+  
+

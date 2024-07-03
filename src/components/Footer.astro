@@ -1,0 +1,54 @@
+---
+const year = new Date().getFullYear()
+---
+
+<footer class='Footer'>
+  <p>Asadero Palacio | {year}</p>
+  <p>C//San Jose nº21 Dúrcal, Granada</p>
+  <p class='number'>958 78 13 60 | 644 47 38 27</p>
+</footer>
+<style>
+  .Footer {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-xxs);
+    align-items: center;
+    justify-content: center;
+    margin-top: var(--size-xl);
+    margin-bottom: var(--size-sm);
+  }
+  .contacto {
+    font-size: var(--size-xs);
+  }
+  .number {
+    letter-spacing: 0.1rem;
+  }
+
+  /* xs */
+  /* @media (min-width: 475px){} */
+  /* sm */
+
+  @media (min-width: 640px) {
+    .Footer {
+      font-size: var(--size-lg);
+    }
+  }
+
+  /* md */
+  /* @media (min-width: 768px){} */
+
+  /* lg */
+  @media (min-width: 1024px) {
+    .Footer {
+      gap: var(--size-base);
+
+      flex-direction: row;
+    }
+  }
+
+  /* xl */
+  /* @media (min-width: 1280px){} */
+
+  /* 2xl */
+  /* @media (min-width: 1536px){} */
+</style>

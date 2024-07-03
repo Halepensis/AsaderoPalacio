@@ -14,6 +14,9 @@ importers:
       astro:
         specifier: ^4.10.3
         version: 4.10.3(typescript@5.4.5)
+      photoswipe:
+        specifier: ^5.4.4
+        version: 5.4.4
       preact:
         specifier: ^10.22.0
         version: 10.22.0
@@ -2003,6 +2006,10 @@ packages:
   path-type@4.0.0:
     resolution: {integrity: sha512-gDKb8aZMDeD/tZWs9P6+q0J9Mwkdl6xMV8TjnGP3qJVJ06bdMgkbBlLU8IdfOsIsFz2BW1rNVT3XuNEl8zPAvw==}
     engines: {node: '>=8'}
+
+  photoswipe@5.4.4:
+    resolution: {integrity: sha512-WNFHoKrkZNnvFFhbHL93WDkW3ifwVOXSW3w1UuZZelSmgXpIGiZSNlZJq37rR8YejqME2rHs9EhH9ZvlvFH2NA==}
+    engines: {node: '>= 0.12.0'}
 
   picocolors@1.0.1:
     resolution: {integrity: sha512-anP1Z8qwhkbmu7MFP5iTt+wQKXgwzf7zTyGlcdzabySa9vd0Xt392U0rVmz9poOaBj0uHJKyyo9/upk0HrEQew==}
@@ -4968,6 +4975,8 @@ snapshots:
   path-to-regexp@6.2.2: {}
 
   path-type@4.0.0: {}
+
+  photoswipe@5.4.4: {}
 
   picocolors@1.0.1: {}
 

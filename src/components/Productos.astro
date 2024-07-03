@@ -1,26 +1,10 @@
 ---
 import ProductoCard from './ProductoCard'
+import './ProductoCard.css'
 ---
 
 <h2 class='main__el-title'>Productos</h2>
 <ProductoCard client:visible />
-
-<!-- <article>
-  <img
-    class='productos__img'
-    src='images/productos/Pollo_asado.webp'
-    alt='foto de unas empandillas recien sacadas del horno'
-  />
-  <ul class='productos__grid'>
-    {
-      productos.map((product) => (
-        <li class='producto'>
-          <a href={`/producto/${product.id}`}>{product.name}</a>
-        </li>
-      ))
-    }
-  </ul>
-</article> -->
 
 <style>
   .main__el-title {

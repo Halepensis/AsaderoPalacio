@@ -1,11 +1,16 @@
 ---
 import { Image } from 'astro:assets'
-import Logo from '@/imagenes/logo.webp'
 ---
 
 <h2 class='main__el-title'>Horario</h2>
 <article class='horario__section'>
-  <Image class='logo__image' src={Logo} alt='Logo de Asadero Palacio' />
+  <Image
+    class='logo__image'
+    src='/images/logo.webp'
+    width='1739'
+    height='794'
+    alt='Logo de Asadero Palacio'
+  />
   <p>De Viernes a Domingo y Festivos</p>
   <p>08:00 - 16:30</p>
   <p>
