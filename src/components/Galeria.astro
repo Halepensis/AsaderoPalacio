@@ -8,37 +8,43 @@ const fotosGaleria = [
     description: 'example descrition'
   },
   {
-    href: '/images/galeria/paella.jpg',
+    href: '/images/galeria/Canelones.webp',
     width: '1920',
     height: '1080',
     description: 'example descrition'
   },
   {
-    href: '/images/galeria/paella.jpg',
+    href: '/images/galeria/Ensalada_mixta.webp',
     width: '1920',
     height: '1080',
     description: 'example descrition'
   },
   {
-    href: 'images/galeria/paella.jpg',
+    href: 'images/galeria/torre-eiffel.webp',
     width: '1920',
     height: '1080',
     description: 'example descrition'
   },
   {
-    href: 'images/galeria/paella.jpg',
-    width: '1920',
-    height: '1080',
-    description: 'example descrition'
-  },
-  {
-    href: 'images/galeria/paella.jpg',
+    href: 'images/galeria/Muslo_relleno.webp',
     width: '1920',
     height: '1080',
     description: 'example descrition'
   },
   {
     href: 'images/galeria/paella.jpg',
+    width: '1920',
+    height: '1080',
+    description: 'example descrition'
+  },
+  {
+    href: 'images/galeria/Pollo_Asado.webp',
+    width: '1920',
+    height: '1080',
+    description: 'example descrition'
+  },
+  {
+    href: 'images/galeria/torre-eiffel.webp',
     width: '1920',
     height: '1080',
     description: 'example descrition'
@@ -64,7 +70,13 @@ const fotosGaleria = [
           data-cropped='true'
           target='_blank'
         >
-          <img class='imagenGaleria' src={foto.href} alt={foto.description} />
+          <img
+            loading='lazy'
+            decoding='async'
+            class='imagenGaleria'
+            src={foto.href}
+            alt={foto.description}
+          />
         </a>
       ))
     }
@@ -98,13 +110,17 @@ const fotosGaleria = [
     margin-bottom: var(--size-base);
   }
   .gridGaleria {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-
-    gap: var(--size-base);
+    columns: 4 320px;
+    column-gap: 0.5em;
   }
   .imagenGaleria {
+    max-width: 100%;
+    display: block;
+    margin-bottom: 0.5em;
     border-radius: 6px;
-    object-fit: cover;
+    transition: box-shadow 0.8s ease;
+  }
+  .imagenGaleria:hover {
+    box-shadow: 0px 0px 0px 2px #ffff;
   }
 </style>

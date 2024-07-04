@@ -37,8 +37,8 @@
   }
   .google {
     border-radius: 6px;
-    height: 200px;
-    width: 200px;
+    width: 100%;
+    height: 100%;
   }
 
   /* MOBILE FIRST  */
@@ -47,12 +47,17 @@
   @media (min-width: 475px) {
     .google {
       width: 400px;
-      height: 200px;
+      height: 400px;
     }
   }
 
   /* sm */
-  /* @media (min-width: 640px){} */
+  @media (min-width: 640px) {
+    .google {
+      width: 600px;
+      height: 400px;
+    }
+  }
 
   /* md */
   @media (min-width: 768px) {
@@ -62,10 +67,6 @@
 
     .about {
       gap: var(--size-3xl);
-    }
-    .google {
-      width: 600px;
-      height: 400px;
     }
   }
 
