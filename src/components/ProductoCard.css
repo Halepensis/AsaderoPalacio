@@ -43,22 +43,69 @@
   display: grid;
   gap: var(--size-sm);
   grid-auto-flow: column;
-  grid-auto-columns: 150px;
+  grid-auto-columns: max-content;
+  padding-left: 0.5rem;
 
   overflow-x: scroll;
   overscroll-behavior-inline: contain;
   scroll-behavior: smooth;
-  scrollbar-color: var(--clr-primary) var(--clr-slate);
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
+.productos__grid::-webkit-scrollbar {
+  display: none;
+}
+.productos__wrapper {
+  position: relative;
+}
+.productos__wrapper svg {
+  width: 24px;
+  cursor: pointer;
+  color: rgb(25, 24, 24);
+  border-radius: 6px;
+}
+.productos__wrapper svg:hover {
+  background: var(--clr-terciary);
+}
+.right-arrow,
+.left-arrow {
+  position: absolute;
+  width: 50px;
+  height: 100%;
+  top: 0;
+  align-items: center;
+  padding: 0 10px;
+  display: flex;
+}
+
+.right-arrow {
+  right: 0;
+  background: linear-gradient(to left, var(--clr-secundary) 20%, transparent);
+  justify-content: flex-end;
+}
+.left-arrow {
+  background: linear-gradient(to right, var(--clr-secundary) 20%, transparent);
+}
+
 .producto {
   text-align: center;
   font-family: var(--font-secondary);
   list-style: none;
   text-decoration: none;
+  user-select: none;
+  white-space: nowrap;
 }
-.active {
+.producto:not(.btn-active) {
+  border: 1px solid var(--clr-primary);
+}
+
+.producto:hover {
   background-color: var(--clr-primary);
-  color: var(--font-secondary);
+  color: var(--clr-terciary);
+}
+.btn-active {
+  background-color: var(--clr-primary);
+  color: var(--clr-terciary);
 }
 
 /* MOBILE FIRST  */
@@ -108,6 +155,14 @@
 
   .producto {
     font-size: var(--size-2xl);
+    white-space: normal;
+  }
+  .producto:not(.btn-active) {
+    border: none;
+  }
+  .right-arrow,
+  .left-arrow {
+    display: none;
   }
 }
 
