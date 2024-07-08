@@ -12,7 +12,6 @@ export const ListOfProducts = ({ productos, handleClick, producto }) => {
     scrollRef.current.scrollLeft = scrollPosition
     CheckLeftArrow(scrollPosition)
     CheckRightArrow(scrollPosition)
-   
   }, [])
 
   const CheckLeftArrow = (newScrollLeft) => {
@@ -21,7 +20,7 @@ export const ListOfProducts = ({ productos, handleClick, producto }) => {
     } else setLeftArrow(false)
   }
   const CheckRightArrow = (newScrollLeft) => {
-    if (newScrollLeft >= 1300) {
+    if (newScrollLeft >= 1500) {
       setRightArrow(false)
     } else setRightArrow(true)
   }

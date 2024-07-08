@@ -14,7 +14,7 @@ type alergenos =
   | 'Altramuces'
   | 'Moluscos'
 
-interface Product {
+export interface Product {
   id: number
   name: string
   price: number | number[]

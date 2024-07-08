@@ -1,7 +1,7 @@
 import { useState } from 'preact/hooks'
 import { productos } from '@/data/products'
-import { ListOfProducts } from '@components/ListOfProducts.jsx'
-import { ProductInfo } from '@/components/ProductInfo.jsx'
+import { ListOfProducts } from '@/components/ListOfProducts'
+import { ProductInfo } from '@/components/ProductInfo'
 
 export default function ProductoCard() {
  

@@ -1,4 +1,5 @@
-export const ProductInfo = ({ producto }) => {
+import { type Product } from '@/data/products'
+export const ProductInfo = ({ producto }: { producto: Product }) => {
   return (
     <article id='card' class='producto__card'>
       <aside class='producto__aside'>
