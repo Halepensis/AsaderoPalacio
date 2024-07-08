@@ -22,6 +22,9 @@
 
   font-size: var(--size-xl);
 }
+.producto__desc {
+  max-width: 40ch;
+}
 
 .producto__alergenos {
   display: flex;
@@ -118,10 +121,12 @@
   .producto__card {
     display: grid;
     grid-template-columns: minmax(200px, 300px) minmax(200px, 1fr);
-    justify-items: center;
   }
   .productos__img {
     height: 150px;
+  }
+  .producto__desc {
+    max-width: 30ch;
   }
   .producto {
     font-size: var(--size-lg);
@@ -151,6 +156,9 @@
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     overflow-x: hidden;
     align-items: center;
+  }
+  .producto__desc {
+    font-size: var(--size-lg);
   }
 
   .producto {
