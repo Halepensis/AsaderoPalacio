@@ -12,6 +12,7 @@ export const ListOfProducts = ({ productos, handleClick, producto }) => {
     scrollRef.current.scrollLeft = scrollPosition
     CheckLeftArrow(scrollPosition)
     CheckRightArrow(scrollPosition)
+   
   }, [])
 
   const CheckLeftArrow = (newScrollLeft) => {
