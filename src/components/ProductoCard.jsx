@@ -7,7 +7,7 @@ export default function ProductoCard() {
  
   const [producto, setProducto] = useState(()=>{
     const productFromStorage = window.localStorage.getItem('product')
-    return productFromStorage? JSON.parse(productFromStorage) : productos[0]})
+    return productFromStorage? JSON.parse(productFromStorage) : productos[0]})``
 
   const handleClick = (product) => {
     const newProduct = product
