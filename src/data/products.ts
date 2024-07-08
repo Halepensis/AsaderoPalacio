@@ -29,7 +29,7 @@ export const productos: Product[] = [
     id: 1,
     name: 'Pollo Asado',
     price: 11.0,
-    image: 'images/productos/Pollo_Asado.webp',
+    image: 'images/galeria/Pollo Asado.webp',
     category: 'Caliente',
     description:
       'Pollo asado condimentado con hierbas naturales sin adivitivos ni conservantes.'
@@ -38,7 +38,7 @@ export const productos: Product[] = [
     id: 2,
     name: 'Patatas Asadas',
     price: 4.8,
-    image: 'images/productos/Pollo_Asado.webp',
+    image: 'images/galeria/Patatas Asadas.webp',
     category: 'Caliente',
     description: 'Patatas confitadas terminadas en el horno',
     trazas: ['Gluten']
@@ -47,7 +47,7 @@ export const productos: Product[] = [
     id: 3,
     name: 'Patatas Fritas',
     price: [2.1, 3.5, 4.5],
-    image: 'images/productos/Pollo_Asado.webp',
+    image: 'images/galeria/Patatas Fritas.webp',
     category: 'Caliente',
     description: 'Patatas fritas de bastones de 1cm de grosor de alta calidad',
     trazas: ['Gluten']
@@ -56,7 +56,7 @@ export const productos: Product[] = [
     id: 4,
     name: 'Muslo Relleno',
     price: 8.0,
-    image: 'images/productos/Muslo_relleno.webp',
+    image: 'images/galeria/Muslo Relleno.webp',
     category: 'Caliente',
     description: 'Muslo de pollo deshuesado y relleno de jamon serrano y queso',
     alergenos: ['Lacteos']
@@ -65,7 +65,7 @@ export const productos: Product[] = [
     id: 5,
     name: 'Caracoles',
     price: 12.0,
-    image: 'images/productos/Caracoles.webp',
+    image: 'images/galeria/Caracoles.webp',
     category: 'Caliente',
     description: 'Caracoles cabrilla con salsa picante y almendras',
     alergenos: ['Pescado', 'Sulfitos', 'Moluscos', 'Frutos de cascara']
@@ -74,7 +74,7 @@ export const productos: Product[] = [
     id: 6,
     name: 'Croquetas',
     price: 7.2,
-    image: 'images/productos/Croquetas.webp',
+    image: 'images/galeria/Croquetas.webp',
     category: 'Caliente',
     description:
       'Bandejas de 6 Ud, croquetas caseras de distintos tipos: Pollo , Jamon o de Setas shitake',
@@ -84,7 +84,7 @@ export const productos: Product[] = [
     id: 7,
     name: 'Empanadillas argentinas',
     price: 2.5,
-    image: 'images/productos/Empanadillas.webp',
+    image: 'images/galeria/Empanadilas.webp',
     category: 'Caliente',
     description:
       'Empanadillas argentinas de carne picada, aceituna y huevo duro',
@@ -92,9 +92,9 @@ export const productos: Product[] = [
   },
   {
     id: 8,
-    name: 'Canelones de Pate',
     price: 7.2,
-    image: 'images/productos/Canelones.webp',
+    name: 'Canelones de Pate',
+    image: 'images/galeria/Canelones.webp',
     category: 'Caliente',
     description: 'Canelones  rellenos de pollo, pate de oca y setas',
     alergenos: ['Lacteos', 'Gluten', 'Sulfitos']
@@ -103,7 +103,7 @@ export const productos: Product[] = [
     id: 9,
     name: 'Paella',
     price: 5.2,
-    image: 'images/productos/Paella.webp',
+    image: 'images/galeria/Paella.webp',
     category: 'Caliente',
     description: 'Paella de pollo y verduras',
     alergenos: ['Apio']
@@ -112,7 +112,7 @@ export const productos: Product[] = [
     id: 10,
     name: 'Salmorejo',
     price: 3.5,
-    image: 'images/productos/Pollo_Asado.webp',
+    image: 'images/galeria/Salmorejo.webp',
     category: 'Frio',
     description: 'Salmorejo',
     alergenos: ['Gluten', 'Sulfitos']
@@ -122,7 +122,7 @@ export const productos: Product[] = [
     id: 11,
     name: 'Ensalada Mixta',
     price: 3.5,
-    image: 'images/productos/Ensalada_mixta.webp',
+    image: 'images/galeria/Ensalada Mixta.webp',
     category: 'Frio',
     description:
       'Ensalada mixta con lechuga, tomate, zanahoria, maiz y pepinillos',
@@ -132,7 +132,7 @@ export const productos: Product[] = [
     id: 12,
     name: 'Alioli',
     price: 1.5,
-    image: 'images/productos/Pollo_Asado.webp',
+    image: 'images/galeria/Pollo Asado.webp',
     category: 'Frio',
     description: 'Salsa alioli poco picante hecha con ajo y aceite',
     alergenos: ['Lacteos']
