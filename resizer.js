@@ -10,7 +10,6 @@ fs.readdir(directoryPath, function (err, files) {
       return console.log('Unable to scan directory: ' + err);
   } 
   files.forEach(function (file,index) {
-      // Do whatever you want to do with the file
       const data = imageSize(directoryPath+file)
       const width = data.width
       const height = data.height
