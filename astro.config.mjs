@@ -5,6 +5,10 @@ import preact from "@astrojs/preact";
 // https://astro.build/config
 export default defineConfig({
   site: 'https://asaderopalacio.com',
+  prefetch: {
+    defaultStrategy:'load',
+    prefetchAll:true
+  },
   base: "/",
   integrations: [preact()],
   output: "static",
@@ -13,6 +17,9 @@ export default defineConfig({
     locales:["es","en"],
     routing:{
       prefixDefaultLocale:false
+    },
+    fallback:{
+      en:'es'
     }
   }
 });

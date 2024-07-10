@@ -1,27 +1,33 @@
 ---
-import { Image } from 'astro:assets'
+import { getI18n } from '@/i18n/app'
+
+const local = Astro.currentLocale
+const i18 = getI18n(local)
 ---
 
-<h2 class='main__el-title'>Horario</h2>
+<h2 class='main__el-title'>{i18.HORARIO__TITLE}</h2>
 <article class='horario__section'>
-  <Image
+  <img
     class='logo__image'
-    src='/images/logo.webp'
-    width='1739'
-    height='794'
+    src='/images/galeria/Puerta.webp'
+    width='1020'
+    height='574'
     alt='Logo de Asadero Palacio'
   />
-  <p>De Viernes a Domingo y Festivos</p>
+  <p>{i18.HORARIO__P}</p>
   <p>08:00 - 16:30</p>
   <p>
-    Llamanos al <span class='telefono'>958781360</span> o <span>644474281</span>
+    {i18.HORARIO__TLF}
+    <span>958781360</span> o <span>644474281</span>
   </p>
 </article>
 <style>
   .logo__image {
+    margin-top: 1rem;
     width: 100%;
-    max-width: 200px;
+    max-width: 400px;
     height: auto;
+    border-radius: 6px;
   }
   .horario__section {
     display: flex;

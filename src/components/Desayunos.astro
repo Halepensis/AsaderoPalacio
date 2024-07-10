@@ -1,6 +1,13 @@
+---
+import { getI18n } from '@/i18n/app'
+
+const local = Astro.currentLocale
+const i18 = getI18n(local)
+---
+
 <article class='desayunos__ele'>
   <div class='desayunos__cabecera'>
-    <h2 class='main__el-title'>Churros y Chocolate</h2>
+    <h2 class='main__el-title'>{i18.DESAYUNOS__TITLE}</h2>
     <svg
       class='desayunos__icon'
       height='40px'
@@ -20,7 +27,7 @@
   </div>
   <img
     class='desayunos__img'
-    src='https://imgs.search.brave.com/1Ef6LVSCdt_BHtiKaZ3jAWVR_mjbB5aG5CUpnRldZxs/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMtc2V2aWxsYS5h/YmMuZXMvbWVkaWEv/Z3VybWVzZXZpbGxh/LzIwMTcvMDUvTGEt/Y2FsZW50ZXJpYS0y/LTk2MHg1NDAuanBn'
+    src='/images/galeria/Churros.webp'
     alt='
     Foto
     de
@@ -33,9 +40,11 @@
     vaso
     de
     chocolate'
+    width='1024'
+    height='574'
   />
   <p class='desayunos__desc'>
-    Pruebe nuestros churros y chocolate para llevar.
+    {i18.DESAYUNOS__P}
   </p>
 
   <ul class='desayunos__price'>
@@ -43,7 +52,7 @@
     <li>1/2L: 3.20€</li>
     <li>1 vaso : 2€</li>
   </ul>
-  <strong class='desayunos__desc'>Sabados y Domingos de 8:00 a 12:00</strong>
+  <strong class='desayunos__desc'>{i18.DESAYUNOS__HORARIO}</strong>
 </article>
 
 <style>
@@ -107,6 +116,12 @@
   @media (min-width: 768px) {
     .desayunos__img {
       height: 150px;
+    }
+    .desayunos__desc {
+      font-size: var(--size-2xl);
+    }
+    .desayunos__price {
+      font-size: var(--size-2xl);
     }
   }
 

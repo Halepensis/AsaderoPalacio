@@ -1,6 +1,7 @@
+
+
 function openMobile (menu,openButton){
   openButton.addEventListener('click', () => {
-    console.log('button clicked')
     if (menu.classList.contains('show')) {
       menu.style.animationName = 'hide'
       setTimeout(() => {
@@ -29,24 +30,13 @@ function closeMobile (menu,openButton){
 }
 
 document.addEventListener('astro:page-load',()=>{
-
 const menu = document.getElementById('mobile__navbar')
 const openButton = document.getElementById('openMobile')
   openMobile(menu,openButton)
   closeMobile(menu,openButton)
 })
 
-document.addEventListener('astro:after-swap',()=>{
-  const menu = document.getElementById('mobile__navbar')
-  if (menu.classList.contains('show')) {
-    menu.style.animationName = 'hide'
-    
-  } else {
-    menu.style.animationName = 'show'
-    menu.classList.add('show')
-  }
 
-})
 
 
 

@@ -1,10 +1,14 @@
 ---
 import ProductoCard from './ProductoCard'
 import './ProductoCard.css'
+import { getI18n } from '@/i18n/app'
+
+const local = Astro.currentLocale
+const i18 = getI18n(local)
 ---
 
-<h2 class='main__el-title'>Productos</h2>
-<ProductoCard client:only='preact' />
+<h2 class='main__el-title'>{i18.PRODUCTS__TITLE}</h2>
+<ProductoCard client:only='preact' lang={local} />
 
 <style>
   .main__el-title {

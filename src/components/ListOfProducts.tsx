@@ -1,6 +1,17 @@
 import { useState, useRef, useEffect } from 'preact/hooks'
+import { type Product } from '@/data/products'
 
-export const ListOfProducts = ({ productos, handleClick, producto }) => {
+export const ListOfProducts = ({
+  productos,
+  handleClick,
+  producto,
+  lang
+}: {
+  productos: Product[]
+  handleClick: (product: Product) => void
+  producto: Product
+  lang: string
+}) => {
   const [scrollPosition, setScrollPosition] = useState(() => {
     const scrollFromStorage = window.localStorage.getItem('scroll-bar')
     return scrollFromStorage ? JSON.parse(scrollFromStorage) : { scrollLeft: 0 }
@@ -9,9 +20,11 @@ export const ListOfProducts = ({ productos, handleClick, producto }) => {
   const [RightArrow, setRightArrow] = useState(true)
   const scrollRef = useRef(null)
   useEffect(() => {
-    scrollRef.current.scrollLeft = scrollPosition
-    CheckLeftArrow(scrollPosition)
-    CheckRightArrow(scrollPosition)
+    if (scrollRef) {
+      scrollRef.current.scrollLeft = scrollPosition
+      CheckLeftArrow(scrollPosition)
+      CheckRightArrow(scrollPosition)
+    }
   }, [])
 
   const CheckLeftArrow = (newScrollLeft) => {
@@ -47,7 +60,8 @@ export const ListOfProducts = ({ productos, handleClick, producto }) => {
             key={product.id}
             onClick={() => handleClick(product)}
           >
-            {product.name}
+            {lang === 'es' && product.name.es}
+            {lang === 'en' && product.name.en}
           </li>
         ))}
       </ul>

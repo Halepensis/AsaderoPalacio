@@ -1,13 +1,22 @@
 ---
 import MenuIcon from '@icons/MenuIcon.astro'
 import Image from 'astro/components/Image.astro'
+import { getRelativeLocaleUrl } from 'astro:i18n'
+import { getI18n } from '@/i18n/app'
+
+const local = Astro.currentLocale
+const homeUrl = getRelativeLocaleUrl(local, '/')
+const aboutUrl = getRelativeLocaleUrl(local, 'about')
+const galleryUrl = getRelativeLocaleUrl(local, 'gallery')
+
+const i18 = getI18n(local)
 ---
 
 <header>
   <nav class='desktop__navbar'>
-    <a class='btn desk__btn' href='/'>Inicio</a>
-    <a class='btn desk__btn' href='/about'>Conocenos</a>
-    <a class='btn desk__btn' href='/gallery'>Galeria</a>
+    <a class='btn desk__btn' href={homeUrl}>{i18.HEADER__MENU_Home}</a>
+    <a class='btn desk__btn' href={aboutUrl}>{i18.HEADER__MENU_About}</a>
+    <a class='btn desk__btn' href={galleryUrl}>{i18.HEADER__MENU_Gallery}</a>
   </nav>
   <div class='container'>
     <button id='openMobile' aria-label='Open mobile menu'>
@@ -24,20 +33,18 @@ import Image from 'astro/components/Image.astro'
       alt='Logo de Asadero Palacio'
     />
 
-    <h1>Asadero Palacio</h1>
-    <p>Desde 1995 ofreciendote el mejor servicio</p>
+    <h1>{i18.HEADER__TITLE}</h1>
+    <p>{i18.HEADER__DESC}</p>
 
     <nav id='mobile__navbar' class='mobile__navbar'>
-      <a class='mobile__btn' href='/'>Inicio</a>
-      <a class='mobile__btn' href='/about'>Conocenos</a>
-      <a class='mobile__btn' href='/gallery'>Galeria</a>
+      <a class='mobile__btn' href={homeUrl}>{i18.HEADER__MENU_Home}</a>
+      <a class='mobile__btn' href={aboutUrl}>{i18.HEADER__MENU_About}</a>
+      <a class='mobile__btn' href={galleryUrl}>{i18.HEADER__MENU_Gallery}</a>
     </nav>
   </div>
 </header>
 
-<script>
-  import '@/js/mobile.js'
-</script>
+<script src='../js/mobile.js'></script>
 
 <style>
   :root {

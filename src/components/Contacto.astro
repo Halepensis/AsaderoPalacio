@@ -1,11 +1,14 @@
 ---
+import { getI18n } from '@/i18n/app'
 
+const local = Astro.currentLocale
+const i18 = getI18n(local)
 ---
 
 <section class='about container'>
   <div class='horario'>
-    <h2 class='horario--title'>Horario</h2>
-    <p>Viernes a Domingo y <strong>Festivos</strong></p>
+    <h2 class='horario--title'>{i18.HORARIO__TITLE}</h2>
+    <p>{i18.HORARIO__P}</p>
     <p>8:00 - 16:00</p>
   </div>
   <aside>

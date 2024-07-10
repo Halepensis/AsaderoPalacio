@@ -1,35 +1,41 @@
 ---
-import { Image } from 'astro:assets'
-import EmpanadillasImg from '@/imagenes/novedades/Empanadillas.webp'
-import CanelonesImg from '@/imagenes/novedades/Canelones.webp'
+import { getI18n } from '@/i18n/app'
+
+const local = Astro.currentLocale
+const i18 = getI18n(local)
 ---
 
-<h2 class='main__el-title'>Novedades</h2>
+<h2 class='main__el-title'>{i18.NEWS__TITLE}</h2>
 <div class='novedades__grid'>
   <article class='novedades__ele'>
-    <h3 class='novedades__title'>Emapanadillas Argentinas</h3>
-    <Image
+    <h3 class='novedades__title'>{i18.NEWS__H3_1}</h3>
+    <img
       class='novedades__img'
-      src={EmpanadillasImg}
+      src='/images/galeria/Empanadilas.webp'
       alt='foto de unas empandillas recien sacadas del horno'
+      width='1020'
+      height='574'
     />
     <p class='novedades__desc'>
-      Rellenas de <strong>carne picada, aceitunas y huevo</strong>. Las
-      autenticas empanadillas argentinas <strong>con masa casera</strong>
+      {i18.NEWS__P1_1}
+      <strong>{i18.NEWS__P1_2}</strong>. {i18.NEWS__P1_3}
+      <strong>{i18.NEWS__P1_4}</strong>
     </p>
   </article>
   <article class='novedades__ele'>
-    <h3 class='novedades__title'>Canelones de Pate</h3>
-    <Image
+    <h3 class='novedades__title'>{i18.NEWS__H3_2}</h3>
+    <img
       class='novedades__img'
-      src={CanelonesImg}
+      src='/images/galeria/Canelones.webp'
       alt='Fotografia de una paella de pollo y judias'
+      width='1020'
+      height='574'
     />
-    <p class='novedades__desc'>
-      Con <strong>pate, pollo y setas</strong>. Los autenticos empanadillas
-      argentinas <strong>con masa casera</strong>
-    </p>
   </article>
+  <p class='novedades__desc'>
+    {i18.NEWS__P2_1}
+    <strong>{i18.NEWS__P2_2}</strong>. {i18.NEWS__P2_3}
+  </p>
 </div>
 
 <style>
