@@ -3,7 +3,7 @@ import MenuIcon from '@icons/MenuIcon.astro'
 import Image from 'astro/components/Image.astro'
 ---
 
-<header transition:persist>
+<header>
   <nav class='desktop__navbar'>
     <a class='btn desk__btn' href='/'>Inicio</a>
     <a class='btn desk__btn' href='/about'>Conocenos</a>
@@ -36,9 +36,7 @@ import Image from 'astro/components/Image.astro'
 </header>
 
 <script>
-  import { closeMobile, openMobile } from '@/js/mobile'
-  openMobile()
-  closeMobile()
+  import '@/js/mobile.js'
 </script>
 
 <style>
@@ -73,7 +71,7 @@ import Image from 'astro/components/Image.astro'
     position: fixed;
     top: 1rem;
     left: 1rem;
-    z-index: 2;
+    z-index: 100;
   }
   .mobile__navbar {
     width: var(--width-menu);
@@ -81,6 +79,7 @@ import Image from 'astro/components/Image.astro'
     background-color: #0f0e0e76;
     position: fixed;
     display: none;
+    z-index: 99;
     top: 0;
     left: 0;
     flex-direction: column;
