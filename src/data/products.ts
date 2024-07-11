@@ -38,7 +38,7 @@ export const productos: Product[] = [
       en: 'Roast Chicken'
     },
     price: 11.0,
-    image: 'images/galeria/Pollo Asado.webp',
+    image: '/images/galeria/Pollo Asado.webp',
     category: 'Caliente',
     description: {
       es: 'Pollo asado condimentado con hierbas naturales sin adivitivos ni conservantes.',
@@ -52,7 +52,7 @@ export const productos: Product[] = [
       en: 'Baked Potatoes'
     },
     price: 4.8,
-    image: 'images/galeria/Patatas Asadas.webp',
+    image: '/images/galeria/Patatas Asadas.webp',
     category: 'Caliente',
     description: {
       es: 'Patatas confitadas a baja temperatura y terminadas en el horno',
@@ -67,7 +67,7 @@ export const productos: Product[] = [
       en: 'Fries'
     },
     price: [2.1, 3.5, 4.5],
-    image: 'images/galeria/Patatas Fritas.webp',
+    image: '/images/galeria/Patatas Fritas.webp',
     category: 'Caliente',
     description: {
       es: 'Patatas fritas de bastones de 1cm de grosor de alta calidad',
@@ -82,7 +82,7 @@ export const productos: Product[] = [
       en: 'Stuffed Chicken Thigh'
     },
     price: 8.0,
-    image: 'images/galeria/Muslo Relleno.webp',
+    image: '/images/galeria/Muslo Relleno.webp',
     category: 'Caliente',
     description: {
       es: 'Muslo de pollo deshuesado y relleno de jamón serrano y queso',
@@ -97,7 +97,7 @@ export const productos: Product[] = [
       en: 'Escargot'
     },
     price: 12.0,
-    image: 'images/galeria/Caracoles.webp',
+    image: '/images/galeria/Caracoles.webp',
     category: 'Caliente',
     description: {
       es: 'Caracoles cabrilla con salsa picante y almendras',
@@ -112,7 +112,7 @@ export const productos: Product[] = [
       en: 'Croquettes'
     },
     price: 7.2,
-    image: 'images/galeria/Croquetas.webp',
+    image: '/images/galeria/Croquetas.webp',
     category: 'Caliente',
     description: {
       es: 'Bandeja de 6 Ud, croquetas caseras de distintos tipos: Pollo , Jamon o de Setas shitake',
@@ -127,7 +127,7 @@ export const productos: Product[] = [
       en: 'Argentine Empanadas'
     },
     price: 2.5,
-    image: 'images/galeria/Empanadilas.webp',
+    image: '/images/galeria/Empanadilas.webp',
     category: 'Caliente',
     description: {
       es: 'Empanadillas argentinas de carne picada, aceituna y huevo duro',
@@ -142,7 +142,7 @@ export const productos: Product[] = [
       es: 'Canelones de Pate',
       en: 'Pâté Cannelloni'
     },
-    image: 'images/galeria/Canelones.webp',
+    image: '/images/galeria/Canelones.webp',
     category: 'Caliente',
     description: {
       es: 'Canelones  rellenos de pollo, pate de oca y setas',
@@ -157,7 +157,7 @@ export const productos: Product[] = [
       en: 'Paella'
     },
     price: 5.2,
-    image: 'images/galeria/Paella.webp',
+    image: '/images/galeria/Paella.webp',
     category: 'Caliente',
     description: {
       es: 'Paella de pollo y verduras, con caldo de huesos casero',
@@ -172,7 +172,7 @@ export const productos: Product[] = [
       en: 'Salmorejo'
     },
     price: 3.5,
-    image: 'images/galeria/Salmorejo.webp',
+    image: '/images/galeria/Salmorejo.webp',
     category: 'Frio',
     description: {
       es: 'Salmorejo suave, hecho con tomates maduros y pan de masa madre',
@@ -188,7 +188,7 @@ export const productos: Product[] = [
       en: 'Mixed Salad'
     },
     price: 3.5,
-    image: 'images/galeria/Ensalada Mixta.webp',
+    image: '/images/galeria/Ensalada Mixta.webp',
     category: 'Frio',
     description: {
       es: 'Ensalada mixta con lechuga, tomate, zanahoria, maiz y pepinillos',
@@ -203,7 +203,7 @@ export const productos: Product[] = [
       en: 'Garlic Sauce'
     },
     price: 1.5,
-    image: 'images/galeria/Pollo Asado.webp',
+    image: '/images/galeria/Pollo Asado.webp',
     category: 'Frio',
     description: {
       es: 'Salsa alioli poco picante hecha con ajo y aceite',

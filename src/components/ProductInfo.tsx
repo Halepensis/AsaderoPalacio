@@ -30,7 +30,7 @@ export const ProductInfo = ({
             ? producto.alergenos.map((alergeno) => (
                 <img
                   class='alergenos__icon'
-                  src={`icons/alergenos/${alergeno}.png`}
+                  src={`/icons/alergenos/${alergeno}.png`}
                   title={alergeno}
                   alt={alergeno}
                 />
