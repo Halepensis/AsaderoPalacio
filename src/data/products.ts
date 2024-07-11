@@ -55,7 +55,7 @@ export const productos: Product[] = [
     image: 'images/galeria/Patatas Asadas.webp',
     category: 'Caliente',
     description: {
-      es: 'Patatas confitadas terminadas en el horno',
+      es: 'Patatas confitadas a baja temperatura y terminadas en el horno',
       en: 'Confit potatoes finished in the oven'
     },
     trazas: ['Gluten']
@@ -115,7 +115,7 @@ export const productos: Product[] = [
     image: 'images/galeria/Croquetas.webp',
     category: 'Caliente',
     description: {
-      es: 'Bandejas de 6 Ud, croquetas caseras de distintos tipos: Pollo , Jamon o de Setas shitake',
+      es: 'Bandeja de 6 Ud, croquetas caseras de distintos tipos: Pollo , Jamon o de Setas shitake',
       en: 'Trays of 6 units, homemade croquettes of different types: Chicken, Ham or Shitake Mushrooms'
     },
     alergenos: ['Lacteos', 'Gluten']
@@ -160,7 +160,7 @@ export const productos: Product[] = [
     image: 'images/galeria/Paella.webp',
     category: 'Caliente',
     description: {
-      es: 'Paella de pollo y verduras',
+      es: 'Paella de pollo y verduras, con caldo de huesos casero',
       en: 'Chicken and vegetable paella'
     },
     alergenos: ['Apio']
@@ -175,7 +175,7 @@ export const productos: Product[] = [
     image: 'images/galeria/Salmorejo.webp',
     category: 'Frio',
     description: {
-      es: 'Salmorejo',
+      es: 'Salmorejo suave, hecho con tomates maduros y pan de masa madre',
       en: 'Salmorejo'
     },
     alergenos: ['Gluten', 'Sulfitos']

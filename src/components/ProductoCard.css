@@ -1,16 +1,19 @@
 .producto__card {
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
   gap: 1rem;
   border-radius: 6px;
-  background-color: rgb(239, 148, 63);
-  padding: 1rem;
+  background-color: rgba(182, 70, 9, 0.209);
+  border: 2px solid rgb(66, 61, 61);
+  padding: 1em;
   margin: 1rem 0px;
+  min-height: 480px;
 }
 .producto__aside {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   gap: 0.5rem;
 }
 .producto__name {
@@ -19,11 +22,11 @@
 .producto__price {
   display: flex;
   gap: 0.5rem;
-
   font-size: var(--size-xl);
 }
 .producto__desc {
   max-width: 40ch;
+  font-size: var(--size-lg);
 }
 
 .producto__alergenos {
@@ -31,7 +34,7 @@
   gap: 0.5rem;
 }
 .alergenos__icon {
-  width: 40px;
+  width: 60px;
 }
 .productos__img {
   align-self: center;
@@ -119,6 +122,7 @@
 /* sm */
 @media (min-width: 640px) {
   .producto__card {
+    min-height: 262px;
     display: grid;
     grid-template-columns: minmax(200px, 300px) minmax(200px, 1fr);
   }
@@ -157,8 +161,11 @@
     overflow-x: hidden;
     align-items: center;
   }
+  .producto__name {
+    font-size: var(--size-2xl);
+  }
   .producto__desc {
-    font-size: var(--size-lg);
+    font-size: var(--size-xl);
   }
 
   .producto {
@@ -182,11 +189,24 @@
   .productos__img {
     height: 350px;
   }
+
   .productos__grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+  .producto__price {
+    font-size: var(--size-2xl);
+  }
+  .producto__name {
+    font-size: var(--size-3xl);
   }
 }
 
 /* 2xl */
 @media (min-width: 1536px) {
+  .producto__price {
+    font-size: var(--size-3xl);
+  }
+  .producto__name {
+    font-size: var(--size-4xl);
+  }
 }
