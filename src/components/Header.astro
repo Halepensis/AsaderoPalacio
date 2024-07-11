@@ -17,32 +17,60 @@ const i18 = getI18n(local)
     <a class='btn desk__btn' href={homeUrl}>{i18.HEADER__MENU_Home}</a>
     <a class='btn desk__btn' href={aboutUrl}>{i18.HEADER__MENU_About}</a>
     <a class='btn desk__btn' href={galleryUrl}>{i18.HEADER__MENU_Gallery}</a>
+    {
+      local === 'es' && (
+        <a href={getRelativeLocaleUrl('en', '/')} class='btn desk__btn'>
+          Cambiar a 🇬🇧
+        </a>
+      )
+    }
+    {
+      local === 'en' && (
+        <a href={getRelativeLocaleUrl('es', '/')} class='btn desk__btn'>
+          Change to 🇪🇦
+        </a>
+      )
+    }
   </nav>
-  <div class='container'>
-    <button id='openMobile' aria-label='Open mobile menu'>
-      <MenuIcon width={32} height={32} />
-    </button>
-
-    <Image
-      loading='eager'
-      fetchpriority='high'
-      class='logo'
-      src='/images/logo.webp'
-      width='1739'
-      height='794'
-      alt='Logo de Asadero Palacio'
-    />
-
-    <h1>{i18.HEADER__TITLE}</h1>
-    <p>{i18.HEADER__DESC}</p>
-
-    <nav id='mobile__navbar' class='mobile__navbar'>
-      <a class='mobile__btn' href={homeUrl}>{i18.HEADER__MENU_Home}</a>
-      <a class='mobile__btn' href={aboutUrl}>{i18.HEADER__MENU_About}</a>
-      <a class='mobile__btn' href={galleryUrl}>{i18.HEADER__MENU_Gallery}</a>
-    </nav>
-  </div>
 </header>
+<div class='container'>
+  <button id='openMobile' aria-label='Open mobile menu'>
+    <MenuIcon width={32} height={32} />
+  </button>
+
+  <Image
+    loading='eager'
+    fetchpriority='high'
+    class='logo'
+    src='/images/logo.webp'
+    width='1739'
+    height='794'
+    alt='Logo de Asadero Palacio'
+  />
+
+  <h1>{i18.HEADER__TITLE}</h1>
+  <p>{i18.HEADER__DESC}</p>
+
+  <nav id='mobile__navbar' class='mobile__navbar'>
+    <a class='mobile__btn' href={homeUrl}>{i18.HEADER__MENU_Home}</a>
+    <a class='mobile__btn' href={aboutUrl}>{i18.HEADER__MENU_About}</a>
+    <a class='mobile__btn' href={galleryUrl}>{i18.HEADER__MENU_Gallery}</a>
+    {
+      local === 'es' && (
+        <a href={getRelativeLocaleUrl('en', '/')} class='mobile__btn'>
+          Cambiar a 🇬🇧
+        </a>
+      )
+    }
+    {
+      local === 'en' && (
+        <a href={getRelativeLocaleUrl('es', '/')} class='mobile__btn'>
+          Change to 🇪🇦
+        </a>
+      )
+    }
+  </nav>
+</div>
 
 <script src='../js/mobile.js'></script>
 
