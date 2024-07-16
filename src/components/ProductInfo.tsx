@@ -1,4 +1,5 @@
 import { type Product } from '@/data/products'
+import { p } from 'dist/_astro/hooks.module.DAVxqLZr'
 export const ProductInfo = ({
   producto,
   lang
@@ -17,8 +18,15 @@ export const ProductInfo = ({
           {typeof producto.price == 'number' && (
             <strong>{producto.price}€</strong>
           )}
+
           {typeof producto.price == 'object' &&
-            producto.price.map((price) => <strong>{price}€ |</strong>)}
+            Object.entries(producto.price).map(([size, price]) => {
+              return (
+                <strong>
+                  {size} : {price}€ |
+                </strong>
+              )
+            })}
         </p>
         <p className='producto__desc'>
           {lang === 'es' && producto.description.es}
@@ -39,7 +47,7 @@ export const ProductInfo = ({
         </div>
       </aside>
       <img
-        key={producto.id}
+        key={producto.image}
         className='productos__img'
         src={producto.image}
         alt={`Foto de ${producto.name.es}`}

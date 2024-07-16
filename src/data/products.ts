@@ -1,3 +1,5 @@
+import type { string } from 'astro/zod'
+
 type alergenos =
   | 'Gluten'
   | 'Crustaceos'
@@ -20,7 +22,7 @@ export interface Product {
     es: string
     en: string
   }
-  price: number | number[]
+  price: number | { [size: string]: number }
   image: string
   category: string
   description: {
@@ -37,11 +39,11 @@ export const productos: Product[] = [
       es: 'Pollo Asado',
       en: 'Roast Chicken'
     },
-    price: 11.0,
+    price: { 1: 11, '1/2': 6 },
     image: '/images/galeria/Pollo Asado.webp',
     category: 'Caliente',
     description: {
-      es: 'Pollo asado condimentado con hierbas naturales sin adivitivos ni conservantes.',
+      es: 'Pollo asado sazonado con hierbas naturales sin adivitivos ni conservantes.',
       en: 'Roast chicken seasoned with natural herbs and without any additives or preservatives.'
     }
   },
@@ -66,7 +68,7 @@ export const productos: Product[] = [
       es: 'Patatas Fritas',
       en: 'Fries'
     },
-    price: [2.1, 3.5, 4.5],
+    price: { S: 2.1, M: 3.5, G: 4.5 },
     image: '/images/galeria/Patatas Fritas.webp',
     category: 'Caliente',
     description: {
