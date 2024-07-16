@@ -3,6 +3,8 @@ import MenuIcon from '@icons/MenuIcon.astro'
 import Image from 'astro/components/Image.astro'
 import { getRelativeLocaleUrl } from 'astro:i18n'
 import { getI18n } from '@/i18n/app'
+import SpainFlag from '@icons/SpainIcon.astro'
+import EnglandFlag from '@icons/EnglandIcon.astro'
 
 const local = Astro.currentLocale
 const homeUrl = getRelativeLocaleUrl(local, '/')
@@ -19,15 +21,16 @@ const i18 = getI18n(local)
     <a class='btn desk__btn' href={galleryUrl}>{i18.HEADER__MENU_Gallery}</a>
     {
       local === 'es' && (
-        <a href={getRelativeLocaleUrl('en', '/')} class='btn desk__btn'>
-          Cambiar a 🇬🇧
+        <a href={getRelativeLocaleUrl('en', '/')} class='btn desk__btn flag'>
+          Cambiar a <EnglandFlag />
         </a>
       )
     }
     {
       local === 'en' && (
-        <a href={getRelativeLocaleUrl('es', '/')} class='btn desk__btn'>
-          Change to 🇪🇦
+        <a href={getRelativeLocaleUrl('es', '/')} class='btn desk__btn flag'>
+          Change to
+          <SpainFlag />
         </a>
       )
     }
@@ -57,15 +60,15 @@ const i18 = getI18n(local)
     <a class='mobile__btn' href={galleryUrl}>{i18.HEADER__MENU_Gallery}</a>
     {
       local === 'es' && (
-        <a href={getRelativeLocaleUrl('en', '/')} class='mobile__btn'>
-          Cambiar a 🇬🇧
+        <a href={getRelativeLocaleUrl('en', '/')} class='mobile__btn flag'>
+          Cambiar a <EnglandFlag />
         </a>
       )
     }
     {
       local === 'en' && (
-        <a href={getRelativeLocaleUrl('es', '/')} class='mobile__btn'>
-          Change to 🇪🇦
+        <a href={getRelativeLocaleUrl('es', '/')} class='mobile__btn flag'>
+          Change to <SpainFlag />
         </a>
       )
     }
@@ -149,6 +152,10 @@ const i18 = getI18n(local)
     background-color: var(--clr-terciary);
     color: var(--clr-primary);
     transform: translate(20px);
+  }
+  .flag {
+    display: flex;
+    gap: 1rem;
   }
   .desktop__navbar {
     display: none;
