@@ -1,5 +1,4 @@
 import { type Product } from '@/data/products'
-import { p } from 'dist/_astro/hooks.module.DAVxqLZr'
 export const ProductInfo = ({
   producto,
   lang

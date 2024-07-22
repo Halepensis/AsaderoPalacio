@@ -1,16 +1,16 @@
 import { defineConfig } from 'astro/config';
-
+import sitemap from '@astrojs/sitemap';
 import preact from "@astrojs/preact";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://asaderopalacio.com',
+  site: 'https://variablevision.xyz',
   prefetch: {
     defaultStrategy:'load',
     prefetchAll:true
   },
   base: "/",
-  integrations: [preact()],
+  integrations: [preact(),sitemap()],
   output: "static",
   i18n:{
     defaultLocale:"es",
@@ -19,6 +19,7 @@ export default defineConfig({
       prefixDefaultLocale:false
     },
     fallback:{
+      en:'es',
       en:'es'
     }
   }
