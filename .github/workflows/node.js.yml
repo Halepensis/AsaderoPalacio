@@ -20,13 +20,16 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+    - uses: pnpm/action-setup@v2
+      with:
+        version: 6.32.9
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - run: npm ci
-    - run: npm astro build
+        cache: 'pnpm'
+    - run: pnpm install 
+    - run: pnpm astro build
     - name: rsync deployments
       uses: burnett01/rsync-deployments@7.0.1
       with:
