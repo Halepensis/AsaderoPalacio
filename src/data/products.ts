@@ -205,7 +205,7 @@ export const productos: Product[] = [
       en: 'Garlic Sauce'
     },
     price: 1.5,
-    image: '/images/galeria/Pollo Asado.webp',
+    image: '/images/galeria/alioli.webp',
     category: 'Frio',
     description: {
       es: 'Salsa alioli poco picante hecha con ajo y aceite',
