@@ -4,7 +4,7 @@ import preact from "@astrojs/preact";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://variablevision.xyz',
+  site: 'https://asaderopalacio.es',
   prefetch: {
     defaultStrategy:'load',
     prefetchAll:true
@@ -13,6 +13,7 @@ export default defineConfig({
   integrations: [preact(),sitemap()],
   output: "static",
   i18n:{
+    
     defaultLocale:"es",
     locales:["es","en"],
     routing:{
