@@ -53,7 +53,7 @@ export const productos: Product[] = [
       es: 'Patatas Asadas',
       en: 'Baked Potatoes'
     },
-    price: 4.8,
+    price: 5.8,
     image: '/images/galeria/Patatas Asadas.webp',
     category: 'Caliente',
     description: {
@@ -68,7 +68,7 @@ export const productos: Product[] = [
       es: 'Patatas Fritas',
       en: 'Fries'
     },
-    price: { S: 2.1, M: 3.5, G: 4.5 },
+    price: { S: 2.7, M: 4.9, G: 5.8 },
     image: '/images/galeria/Patatas Fritas.webp',
     category: 'Caliente',
     description: {
@@ -113,7 +113,7 @@ export const productos: Product[] = [
       es: 'Croquetas',
       en: 'Croquettes'
     },
-    price: 7.2,
+    price: 8,
     image: '/images/galeria/Croquetas.webp',
     category: 'Caliente',
     description: {
@@ -139,11 +139,11 @@ export const productos: Product[] = [
   },
   {
     id: 8,
-    price: 7.2,
     name: {
       es: 'Canelones de Pate',
       en: 'Pâté Cannelloni'
     },
+    price: 7.2,
     image: '/images/galeria/Canelones.webp',
     category: 'Caliente',
     description: {
@@ -158,7 +158,7 @@ export const productos: Product[] = [
       es: 'Paella',
       en: 'Paella'
     },
-    price: 5.2,
+    price: 5.8,
     image: '/images/galeria/Paella.webp',
     category: 'Caliente',
     description: {
