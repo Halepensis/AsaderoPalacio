@@ -1,5 +1,3 @@
-import type { string } from 'astro/zod'
-
 type alergenos =
   | 'Gluten'
   | 'Crustaceos'
