@@ -1,0 +1,45 @@
+---
+import { getI18n } from '@/i18n/app'
+const local = Astro.currentLocale
+const i18 = getI18n(local)
+---
+
+<aside>
+  <p>{i18.HEADER__VAC1}</p>
+  <p>{i18.HEADER__VAC2}</p>
+</aside>
+
+<style>
+  aside {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    color: white;
+    text-decoration: underline;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  @media (min-width: 475px) {
+    aside {
+      font-size: var(--size-2xl);
+    }
+  }
+  @media (min-width: 768px) {
+    aside {
+      font-size: var(--size-3xl);
+    }
+  }
+  @media (min-width: 1024px) {
+    aside {
+      font-size: var(--size-4xl);
+    }
+  }
+  @media (min-width: 1280px) {
+    aside {
+      font-size: var(--size-5xl);
+    }
+  }
+</style>
