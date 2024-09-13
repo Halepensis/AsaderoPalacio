@@ -96,7 +96,7 @@ export const productos: Product[] = [
       es: 'Caracoles',
       en: 'Escargot'
     },
-    price: 12.0,
+    price: 13.0,
     image: '/images/galeria/Caracoles.webp',
     category: 'Caliente',
     description: {
@@ -111,7 +111,7 @@ export const productos: Product[] = [
       es: 'Croquetas',
       en: 'Croquettes'
     },
-    price: 8,
+    price: 8.5,
     image: '/images/galeria/Croquetas.webp',
     category: 'Caliente',
     description: {
@@ -156,7 +156,7 @@ export const productos: Product[] = [
       es: 'Paella',
       en: 'Paella'
     },
-    price: 5.8,
+    price: 6,
     image: '/images/galeria/Paella.webp',
     category: 'Caliente',
     description: {
@@ -202,7 +202,7 @@ export const productos: Product[] = [
       es: 'Alioli',
       en: 'Garlic Sauce'
     },
-    price: 1.5,
+    price: 1.7,
     image: '/images/galeria/alioli.webp',
     category: 'Frio',
     description: {
