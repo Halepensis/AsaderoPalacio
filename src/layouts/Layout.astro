@@ -31,8 +31,6 @@ const { title, description } = Astro.props
 
     <title>{title}</title>
     <ViewTransitions />
-  </head>
-  <body>
     <!--Test -->
     <!-- Google tag (gtag.js) -->
     <script async src='https://www.googletagmanager.com/gtag/js?id=G-SYREKJH21R'
@@ -46,6 +44,8 @@ const { title, description } = Astro.props
 
       gtag('config', 'G-SYREKJH21R')
     </script>
+  </head>
+  <body>
     <Header />
     <slot />
     <Footer />
