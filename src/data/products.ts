@@ -41,7 +41,7 @@ export const productos: Product[] = [
     image: '/images/galeria/Pollo Asado.webp',
     category: 'Caliente',
     description: {
-      es: 'Pollo asado sazonado con hierbas naturales sin adivitivos ni conservantes.',
+      es: 'Pollo asado sazonado con hierbas naturales sin aditivos ni conservantes.',
       en: 'Roast chicken seasoned with natural herbs and without any additives or preservatives.'
     }
   },
@@ -96,7 +96,7 @@ export const productos: Product[] = [
       es: 'Caracoles',
       en: 'Escargot'
     },
-    price: 13.0,
+    price: 14.0,
     image: '/images/galeria/Caracoles.webp',
     category: 'Caliente',
     description: {
@@ -111,12 +111,12 @@ export const productos: Product[] = [
       es: 'Croquetas',
       en: 'Croquettes'
     },
-    price: 8.5,
+    price: 9.0,
     image: '/images/galeria/Croquetas.webp',
     category: 'Caliente',
     description: {
-      es: 'Bandeja de 6 Ud, croquetas caseras de distintos tipos: Pollo , Jamon o de Setas shitake',
-      en: 'Trays of 6 units, homemade croquettes of different types: Chicken, Ham or Shitake Mushrooms'
+      es: 'Bandeja de 6 Ud, croquetas caseras de distintos tipos: Pollo , Jamón o de Setas shiitake',
+      en: 'Trays of 6 units, homemade croquettes of different types: Chicken, Ham or Shiitake Mushrooms'
     },
     alergenos: ['Lacteos', 'Gluten']
   },
@@ -126,7 +126,7 @@ export const productos: Product[] = [
       es: 'Empanadillas argentinas',
       en: 'Argentine Empanadas'
     },
-    price: 2.5,
+    price: 2.8,
     image: '/images/galeria/Empanadilas.webp',
     category: 'Caliente',
     description: {
