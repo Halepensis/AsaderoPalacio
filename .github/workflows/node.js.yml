@@ -5,52 +5,39 @@ name: Deploy
 
 on:
   push:
-    branches: [ "main" ]
-
+    branches: ['main']
 
 jobs:
   cache-and-install:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@v4
-      
-    - name: Setup pnpm
-      uses: pnpm/action-setup@v4.0.0
-      with:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4.0.0
+        with:
           version: 9
           run_install: false
-          
-    - name: Install Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: '20'
-        cache: 'pnpm'
-        
-    - name: Install dependecies
-      run: pnpm install
-      
-    - name: Make build 
-      run: pnpm astro build
 
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'pnpm'
 
-      
-    - name: copy file via ssh password
-      uses: appleboy/scp-action@v1
-      with:
-        host: ${{ secrets.DEPLOY_HOST }}
-        username: ${{ secrets.DEPLOY_USER }}
-        key: ${{ secrets.DEPLOY_KEY }}
-        port: ${{ secrets.DEPLOY_PORT }}
-        source: "dist/"
-        target: "/root/docker/caddy/site"
-        
-        
-    
-    
-    
-    
-  
-      
-    
-    
+      - name: Install dependecies
+        run: pnpm install
+
+      - name: Make build
+        run: pnpm astro build
+
+      - name: copy file via ssh password
+        uses: appleboy/scp-action@v1
+        with:
+          host: ${{ secrets.DEPLOY_HOST }}
+          username: ${{ secrets.DEPLOY_USER }}
+          key: ${{ secrets.DEPLOY_KEY }}
+          port: ${{ secrets.DEPLOY_PORT }}
+          source: 'dist/'
+          target: ${{secrets.DEPLOY_PATH}}
