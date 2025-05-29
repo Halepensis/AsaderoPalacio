@@ -37,7 +37,7 @@ export const productos: Product[] = [
       es: 'Pollo Asado',
       en: 'Roast Chicken'
     },
-    price: { 1: 11, '1/2': 6 },
+    price: { 1: 12, '1/2': 6.5 },
     image: '/images/galeria/Pollo Asado.webp',
     category: 'Caliente',
     description: {
