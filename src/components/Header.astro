@@ -54,7 +54,7 @@ const i18 = getI18n(local)
 
   <h1>{i18.HEADER__TITLE}</h1>
   <p>{i18.HEADER__DESC}</p>
-  <!--<Vacaciones /> -->
+  <Vacaciones />
   <nav id='mobile__navbar' class='mobile__navbar'>
     <a class='mobile__btn' href={homeUrl}>{i18.HEADER__MENU_Home}</a>
     <a class='mobile__btn' href={aboutUrl}>{i18.HEADER__MENU_About}</a>
@@ -84,8 +84,7 @@ const i18 = getI18n(local)
   }
   @keyframes blur {
     to {
-      box-shadow: 0 5px 50px -5px hsla(0, 0, 100%, 0.1) 0 0px 0px 1px
-        hsla(0, 0, 0, 0.3);
+      box-shadow: 0 5px 50px -5px hsla(0, 0, 100%, 0.1) 0 0px 0px 1px hsla(0, 0, 0, 0.3);
       background: var(--clr-primary);
       backdrop-filter: blur(5px);
     }
